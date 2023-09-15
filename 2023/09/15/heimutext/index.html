@@ -3,7 +3,7 @@
 <html lang="cn">
     <head>
         <meta charset="utf-8" />
-        <title>Tags: 原神 | 紫色的个人博客</title>
+        <title>博客黑幕效果使用指南 | 紫色的个人博客</title>
         <meta name="author" content="紫色空灵" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
@@ -32,6 +32,10 @@
 
 
 <script src="/js/lib/preview.js"></script>
+
+
+
+
 
 
 
@@ -146,103 +150,84 @@
 
             <transition name="into">
                 <div id="main" v-show="!loading">
-                    <div id="archives">
-    
-    <div class="categories-tags">
+                    <div class="article">
+    <div>
+        <h1>博客黑幕效果使用指南</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/9/15
+        </span>
         
-        
-        <span>
-            <a href="/tags/%E6%8A%80%E6%9C%AF/" style="background: #ff7d73">
+        <span class="category">
+            <a href="/categories/%E6%B5%8B%E8%AF%95/">
                 <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
-                技术
+                测试
             </a>
         </span>
         
         
-        
-        <span>
-            <a href="/tags/%E6%AC%A2%E8%BF%8E/" style="background: #00bcd4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                欢迎
-            </a>
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E6%8A%80%E6%9C%AF/" style="color: #00bcd4">技术</a>
+            </span>
+            
         </span>
-        
-        
-        
-        <span>
-            <a href="/tags/%E5%8E%9F%E7%A5%9E/" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                原神
-            </a>
-        </span>
-        
-        
-        
-        
-        
-        <span>
-            <a href="/tags/%E6%84%9F%E8%B0%A2/" style="background: #ffa2c4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                感谢
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/%E6%95%99%E8%82%B2/" style="background: #ff7d73">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                教育
-            </a>
-        </span>
-        
         
     </div>
     
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2023/8/18</div>
-            <a href="/2023/08/18/%E5%8E%9F%E7%A5%9E/">
-                <h3>关于原神更新包太大的评论</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="/categories/%E8%AF%84%E8%AE%BA/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        评论
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/%E5%8E%9F%E7%A5%9E/" style="color: #03a9f4">原神</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
+    <div class="content" v-pre>
+        <p>真就离谱！！！</p>
+<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>我真服了，这个博客渲染HTML不求行，给我搞成这样：<br><img src="https://picss.sunbangyan.cn/2023/09/15/zovb0o.png" alt="离谱"><br>上面是用hexo s的预览结果<br><img src="https://picdm.sunbangyan.cn/2023/09/15/zp65s8.png" alt="也是离谱"><br>这个是用hexo d部署到网上时网站上显示的。。。。。<br>我搞了好久都没有搞好，结果我把网页重新删除一遍之后又好了！<br>我。。。。。无语</p>
+<h2 id="添加代码过程"><a href="#添加代码过程" class="headerlink" title="添加代码过程"></a>添加代码过程</h2><p>去网上搜索了萌娘百科黑幕的效果，发现是在网页上添加css文件的代码进行实现的<br>具体代码是</p>
+<pre><code class="css">span.heimu a.external,span.heimu a.external:visited,span.heimu a.extiw,span.heimu a.extiw:visited &#123;
+    color: #252525
+&#125;
+.heimu,.heimu a,a .heimu,.heimu a.new &#123;
+    background-color: #252525;
+    color: #252525;
+    text-shadow: none
+&#125;
+body:not(.heimu_toggle_on) .heimu:hover,body:not(.heimu_toggle_on) .heimu:active,body:not(.heimu_toggle_on) .heimu.off &#123;
+    transition: color .13s linear;
+    color: #fff
+&#125;
+body:not(.heimu_toggle_on) .heimu:hover a,body:not(.heimu_toggle_on) a:hover .heimu,body:not(.heimu_toggle_on) .heimu.off a,body:not(.heimu_toggle_on) a:hover .heimu.off &#123;
+    transition: color .13s linear;
+    color: #add8e6
+&#125;
+body:not(.heimu_toggle_on) .heimu.off .new,body:not(.heimu_toggle_on) .heimu.off .new:hover,body:not(.heimu_toggle_on) .new:hover .heimu.off,body:not(.heimu_toggle_on) .heimu.off .new,body:not(.heimu_toggle_on) .heimu.off .new:hover,body:not(.heimu_toggle_on) .new:hover .heimu.off &#123;
+    transition: color .13s linear;
+    color: #ba0000
+&#125;
+</code></pre>
+<p>（来自萌娘百科）<br>我直接添加到particlex主题自带的<code>main.css</code>中<br>然后直接在md文档里写html代码就行了，也就是这么写</p>
+<pre><code class="html">&lt;span class=&quot;heimu&quot; title=&quot;你知道的太多了&quot;&gt;紫色的个人博客&lt;/span&gt;
+</code></pre>
+<p>渲染之后是这样的：<br><span class="heimu" title="你知道的太多了">紫色的个人博客</span><br>和萌娘百科一样，电脑端鼠标放在黑幕上即可划开黑幕，移动端是点击黑幕即可划开黑幕</p>
+<h2 id="未来功能"><a href="#未来功能" class="headerlink" title="未来功能"></a>未来功能</h2><p>1.会把主题模式换一下，分为两个主题，一个是粉色的主题，另一个是蓝色的主题，和性别的代表色有关，实现上边栏自由切换主题<br>2.会加入一些其他的友链<br>3.经过测试后会加入服务器的官网</p>
+
     </div>
+    
+    
+    
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    
+    
+    
     
 </div>
 
@@ -275,6 +260,29 @@
             
         </div>
         <script src="/js/main.js"></script>
+        
+        
+<script
+    src="https://giscus.app/client.js"
+    data-repo=""
+    data-repo-id=""
+    data-category=""
+    data-category-id=""
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    crossorigin
+    async
+></script>
+
+
+
+
+
         
     </body>
 </html>
