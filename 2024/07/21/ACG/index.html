@@ -3,7 +3,7 @@
 <html lang="cn">
     <head>
         <meta charset="utf-8" />
-        <title>关于作者 | 紫色的个人博客</title>
+        <title>ACGN中的语文 | 紫色的个人博客</title>
         <meta name="author" content="紫色空灵" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
@@ -33,6 +33,9 @@
 
 <script src="/js/lib/preview.js"></script>
 
+
+<script src="https://cdn.staticfile.org/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script src="/js/lib/crypto.js"></script>
 
 
 
@@ -166,14 +169,14 @@
                 <div id="main" v-show="!loading">
                     <div class="article">
     <div>
-        <h1>关于作者</h1>
+        <h1>ACGN中的语文</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2023/4/15
+            2024/7/21
         </span>
         
         <span class="category">
@@ -193,45 +196,32 @@
             
             <span class="tag">
                 
-                <a href="/tags/%E6%AC%A2%E8%BF%8E/" style="color: #03a9f4">欢迎</a>
+                <a href="/tags/%E6%95%99%E8%82%B2/" style="color: #03a9f4">教育</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E4%BA%8C%E6%AC%A1%E5%85%83/" style="color: #00a596">二次元</a>
             </span>
             
         </span>
         
     </div>
     
-    <div class="content" v-pre>
-        <ul>
-<li></li>
-</ul>
-<h1 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h1><p>大家好，我叫紫色，这里是我的个人博客。在这里我会写一些有趣的，好玩的东西，以及一些数据分享，希望你能喜欢。</p>
-<h2 id="活跃平台"><a href="#活跃平台" class="headerlink" title="活跃平台"></a>活跃平台</h2><table>
-<thead>
-<tr>
-<th>平台</th>
-<th>用户名</th>
-<th>ID</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>QQ</td>
-<td>伊莲</td>
-<td><a target="_blank" rel="noopener" href="https://wpa.qq.com/msgrd?v=3&uin=3378117874&site=qq&menu=yes&jumpflag=1">3378117874</a></td>
-</tr>
-<tr>
-<td>微信</td>
-<td>紫色空灵</td>
-<td><a target="_blank" rel="noopener" href="https://u.wechat.com/MCh1h6z1o_AspPg1QmGNq-o">zise3378117874</a></td>
-</tr>
-<tr>
-<td>bilibili</td>
-<td><a target="_blank" rel="noopener" href="https://space.bilibili.com/591904067">我的世界紫色</a></td>
-<td><a target="_blank" rel="noopener" href="https://space.bilibili.com/591904067">我的世界紫色</a></td>
-</tr>
-</tbody></table>
-<h2 id="爱好"><a href="#爱好" class="headerlink" title="爱好"></a>爱好</h2><p>我的爱好十分广泛，比如<code>播音</code> <code>生物</code> <code>游戏</code> <code>电脑</code> <code>化学</code>等，总之…….说不完啦！</p>
-
-    </div>
+    
+    <input
+        id="crypto"
+        :class="['input', cryptoClass]"
+        :disabled="cryptoStatus"
+        ref="crypto"
+        placeholder="文章被加密，请输入密码"
+        data-encrypted="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"
+        data-shasum="cf1af7918df5a58ae7e45da12e947e50e047ee8b9f86ef3bc7c52b18a0a682ba"
+        v-model="crypto"
+    />
+    <transition name="fade">
+        <div class="content" ref="content" v-show="cryptoStatus"></div>
+    </transition>
     
     
     
