@@ -465,7 +465,7 @@
     margin: 0;
     padding: 0;
     position: relative;
-    scrollbar-color: #8ab5ff #e6efff;
+    scrollbar-color: #ff8ab5 #ffa4c5;
     scrollbar-width: thin;
     word-break: keep-all;
     word-wrap: break-word;
@@ -788,7 +788,7 @@ table td:nth-child(odd) {
     background: #d9e8ff4d;
 }
 table th {
-    background: #a3ddfb;
+    background: #fcb6d8;
 }
 table tr th,
 table tr td {
