@@ -9,25 +9,29 @@
         <meta name="keywords" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
         <link rel="icon" href="/images/favicon.ico" />
-        <script src="https://cdn.staticfile.org/vue/3.2.47/vue.global.prod.min.js"></script>
-<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.3.0/css/all.min.css" />
-<link rel="stylesheet" href="/css/fonts.min.css" />
+        <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
 <script> const mixins = {}; </script>
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 
-<script src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
 <link
     rel="stylesheet"
-    href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/github.min.css"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
 />
 <script src="/js/lib/highlight.js"></script>
 
 
-<script src="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.js"></script>
-<script src="https://cdn.staticfile.org/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
-<link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.css" />
+<script src="https://cdn.staticfile.org/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://cdn.staticfile.org/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.9/katex.min.css" />
 <script src="/js/lib/math.js"></script>
 
 
@@ -39,7 +43,9 @@
 
 
 
+<script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
 <link rel="stylesheet" href="/css/main.css" />
+<link rel="preconnect" href="https://static-argvchs.netlify.app" />
 
     <meta name="generator" content="Hexo 6.3.0"></head>
     <body>
@@ -151,7 +157,7 @@
                     
 <div id="archives">
     
-    <input id="search-bar" class="input" placeholder="搜索，仅支持搜索标题" v-model="rawSearch" />
+    <input id="search-bar" class="input" placeholder="搜索" v-model="rawSearch" />
     
     <div id="timeline-wrap" ref="timeline">
         
@@ -179,9 +185,10 @@
                             <i class="fa-solid fa-tags fa-fw"></i>
                         </span>
                         
+                        
                         <span class="tag">
                             
-                            <a href="/tags/%E6%84%9F%E8%B0%A2/" style="color: #ff7d73">感谢</a>
+                            <a href="/tags/%E6%84%9F%E8%B0%A2/" style="color: #00a596">感谢</a>
                         </span>
                         
                     </span>
@@ -214,14 +221,15 @@
                             <i class="fa-solid fa-tags fa-fw"></i>
                         </span>
                         
+                        
                         <span class="tag">
                             
-                            <a href="/tags/%E6%95%99%E8%82%B2/" style="color: #00a596">教育</a>
+                            <a href="/tags/%E6%8A%80%E6%9C%AF/" style="color: #ffa2c4">技术</a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/tags/%E6%8A%80%E6%9C%AF/" style="color: #ff7d73">技术</a>
+                            <a href="/tags/%E6%95%99%E8%82%B2/" style="color: #ff7d73">教育</a>
                         </span>
                         
                     </span>
@@ -254,14 +262,15 @@
                             <i class="fa-solid fa-tags fa-fw"></i>
                         </span>
                         
+                        
                         <span class="tag">
                             
-                            <a href="/tags/%E4%BA%8C%E6%AC%A1%E5%85%83/" style="color: #ffa2c4">二次元</a>
+                            <a href="/tags/%E4%BA%8C%E6%AC%A1%E5%85%83/" style="color: #03a9f4">二次元</a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/tags/%E5%8E%9F%E7%A5%9E/" style="color: #03a9f4">原神</a>
+                            <a href="/tags/%E5%8E%9F%E7%A5%9E/" style="color: #ffa2c4">原神</a>
                         </span>
                         
                     </span>
@@ -294,9 +303,10 @@
                             <i class="fa-solid fa-tags fa-fw"></i>
                         </span>
                         
+                        
                         <span class="tag">
                             
-                            <a href="/tags/%E6%8A%80%E6%9C%AF/" style="color: #00a596">技术</a>
+                            <a href="/tags/%E6%8A%80%E6%9C%AF/" style="color: #00bcd4">技术</a>
                         </span>
                         
                     </span>
@@ -328,6 +338,7 @@
                         <span class="icon">
                             <i class="fa-solid fa-tags fa-fw"></i>
                         </span>
+                        
                         
                         <span class="tag">
                             
@@ -364,14 +375,15 @@
                             <i class="fa-solid fa-tags fa-fw"></i>
                         </span>
                         
+                        
                         <span class="tag">
                             
-                            <a href="/tags/%E4%BA%8C%E6%AC%A1%E5%85%83/" style="color: #03a9f4">二次元</a>
+                            <a href="/tags/%E4%BA%8C%E6%AC%A1%E5%85%83/" style="color: #ffa2c4">二次元</a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/tags/PhigrOS/" style="color: #00a596">PhigrOS</a>
+                            <a href="/tags/PhigrOS/" style="color: #ff7d73">PhigrOS</a>
                         </span>
                         
                     </span>
@@ -404,14 +416,15 @@
                             <i class="fa-solid fa-tags fa-fw"></i>
                         </span>
                         
+                        
                         <span class="tag">
                             
-                            <a href="/tags/%E6%95%99%E8%82%B2/" style="color: #00a596">教育</a>
+                            <a href="/tags/%E6%95%99%E8%82%B2/" style="color: #ff7d73">教育</a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/tags/%E4%BA%8C%E6%AC%A1%E5%85%83/" style="color: #00a596">二次元</a>
+                            <a href="/tags/%E4%BA%8C%E6%AC%A1%E5%85%83/" style="color: #ffa2c4">二次元</a>
                         </span>
                         
                     </span>
@@ -427,7 +440,7 @@
     <div id="footer-wrap">
         <div>
             &copy;
-            2022 - 2023 紫色空灵の博客
+            2022 - 2024 紫色空灵の博客
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>
