@@ -1,45 +1,44 @@
 
 <!DOCTYPE html>
 <html lang="cn">
-    <head>
-        <meta charset="utf-8" />
-        <title>ACG中的语文 | 紫色空灵の博客</title>
-        <meta name="author" content="紫色空灵" />
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-        <link rel="icon" href="/images/favicon.ico" />
-        <link rel="preconnect" href="https://cdn.staticfile.org" />
-<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
-<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
-<link rel="preconnect" href="https://fonts.loli.net" />
-<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
-<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
-<script> const mixins = {}; </script>
-
-<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-
-
-<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
-<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<head>
+    <meta charset="utf-8" />
+    <title>ACG中的语文 | 紫色空灵の博客</title>
+    <meta name="author" content="紫色空灵" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
 <link
     rel="stylesheet"
-    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
 />
 <script src="/js/lib/highlight.js"></script>
 
-
-<script src="https://cdn.staticfile.org/KaTeX/0.16.9/katex.min.js"></script>
-<script src="https://cdn.staticfile.org/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
-<link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.9/katex.min.css" />
-<script src="/js/lib/math.js"></script>
 
 
 <script src="/js/lib/preview.js"></script>
 
 
-<script src="https://cdn.staticfile.org/crypto-js/4.2.0/crypto-js.min.js"></script>
-<script src="/js/lib/crypto.js"></script>
 
 
 
@@ -47,25 +46,22 @@
 
 
 
-
-<script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
 <link rel="stylesheet" href="/css/main.css" />
-<link rel="preconnect" href="https://static-argvchs.netlify.app" />
 
-    <meta name="generator" content="Hexo 6.3.0"></head>
-    <body>
-        <div id="layout">
-            <transition name="fade">
-                <div id="loading" v-show="loading">
-                    <div id="loading-circle">
-                        <h2>正在加载中</h2>
-                        <p>加载过慢请开启缓存 内容稍后就好</p>
-                        <img src="/images/loading.gif" />
-                    </div>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
                 </div>
-            </transition>
-            <nav id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
-    <div id="desktop-menu">
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
         <a class="title" href="/">
             <span>紫色空灵の博客</span>
         </a>
@@ -95,8 +91,8 @@
             <span>&ensp;标签</span>
         </a>
         
-    </div>
-    <div id="mobile-menu">
+    </nav>
+    <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
             <i class="fa-solid fa-bars fa-fw"></i>
             <span>&emsp;紫色空灵の博客</span>
@@ -151,15 +147,14 @@
                 
             </div>
         </transition>
-    </div>
-</nav>
+    </nav>
+</div>
 <transition name="fade">
     <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
 </transition>
 
-            <transition name="into">
-                <div id="main" v-show="!loading">
-                    <div class="article">
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
     <div>
         <h1>ACG中的语文</h1>
     </div>
@@ -186,48 +181,56 @@
                 <i class="fa-solid fa-tags fa-fw"></i>
             </span>
             
+            
             <span class="tag">
                 
-                <a href="/tags/%E6%95%99%E8%82%B2/" style="color: #00bcd4">教育</a>
+                <a href="/tags/%E6%95%99%E8%82%B2/" style="color: #00bcd4">
+                    教育
+                </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/%E4%BA%8C%E6%AC%A1%E5%85%83/" style="color: #00a596">二次元</a>
+                <a href="/tags/%E4%BA%8C%E6%AC%A1%E5%85%83/" style="color: #03a9f4">
+                    二次元
+                </a>
             </span>
             
         </span>
         
     </div>
     
-    
-    <input
-        id="crypto"
-        :class="['input', cryptoClass]"
-        :disabled="cryptoStatus"
-        ref="crypto"
-        placeholder="文章被加密，请输入密码"
-        data-encrypted="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"
-        data-shasum="cf1af7918df5a58ae7e45da12e947e50e047ee8b9f86ef3bc7c52b18a0a682ba"
-        v-model="crypto"
-    />
-    <transition name="fade">
-        <div class="content" ref="content" v-show="cryptoStatus"></div>
-    </transition>
-    
-    
-    
-    
-    <div id="comment">
-        <div id="giscus-container" class="giscus"></div>
+    <div class="content" v-pre>
+        <h1 id="什么是ACG"><a href="#什么是ACG" class="headerlink" title="什么是ACG"></a>什么是ACG</h1><p>ACGN是一个广泛用来描述动漫、漫画、游戏和小说等相关文化领域的术语。每个字母代表了一种特定类型的娱乐内容：<code> A表示动画（Animation），C表示漫画（Comic/ Cartoons），G表示游戏（Games）</code>。ACG架构了一个庞大而独特的文化生态系统，吸引了数以百万计的粉丝和爱好者。<br>现在我将采用A，C，G，的顺序摘抄句子，并配图。</p>
+<h1 id="A（Animation）动画"><a href="#A（Animation）动画" class="headerlink" title="A（Animation）动画"></a>A（Animation）动画</h1><h2 id="魔女之旅"><a href="#魔女之旅" class="headerlink" title="魔女之旅"></a>魔女之旅</h2><p>一开始我本打算给你一场极为艰难的试炼，让你受挫；但你为了达成目标不惜任何努力，实在是太优秀了，也有天赋，而且，也理解周围对你的看法，所以我便觉得给你试炼也是没用的，你一定会经受住苦难，重新站起来。但是，这也是你的问题所在，你太喜欢忍耐了。不要觉得自己能抗过去就行了，要是有事情不称心就起身反抗吧，不要就是不要，要学会大声说出口，这样你才能保护自己。</p>
+<p>当真心想要做成一件事的时候，人总是孤独的，必须要孤身一人，互相依赖上就完了。</p>
+<p>怀有恶意的人，即便不说谎也能做坏事。<br>谎言也并不都是恶，善意的谎言有时就像润滑油，能让人际关系变得更加圆滑；要是没有这些，只会让人们徒生摩擦关系紧张。</p>
+<p>离别绝对不是令人伤心的事情，不要止步不前，不要固步自封，因为离别是为了新的邂逅</p>
+<h2 id="魔法少女小圆"><a href="#魔法少女小圆" class="headerlink" title="魔法少女小圆"></a>魔法少女小圆</h2><p>只为自己而活的话，所有东西就由自己来承担</p>
+<p><del>和我签订契约，成为魔法少女吧。</del></p>
+<p>不管前路有多大的阻碍，我们肯定会跨越给你看</p>
+<p>背叛她们的不是我们，真要说的话，背叛她们的是她们自身的愿望。无论何种愿望，哪怕它有一点点不合常理之处便一定会产生扭曲，最终从这扭曲中诞生出灾祸也是合情合理。如果这理所应当的结果都被当成背叛的话，那么愿望本身就是个错误。</p>
+<h1 id="C（Comic-Cartoons）漫画"><a href="#C（Comic-Cartoons）漫画" class="headerlink" title="C（Comic&#x2F; Cartoons）漫画"></a>C（Comic&#x2F; Cartoons）漫画</h1><p>由于常见漫画基本上都动画化了所以就和第一个重复了<br>所以就不列了</p>
+<h1 id="G-Game-游戏"><a href="#G-Game-游戏" class="headerlink" title="G (Game) 游戏"></a>G (Game) 游戏</h1><p><span class="heimu" title="你知道的太多了">这才是重头戏！<br>本文的重点部分即将开始</span></p>
+<h2 id="千恋-万花"><a href="#千恋-万花" class="headerlink" title="千恋*万花"></a>千恋*万花</h2><p> 愿千年之恋,有朝一日能使万花怒放</p>
+<p> 不论是乌云密布，还是大雨倾盆，星星总是会在同一个地方</p>
+<p> 千年的爱恋，于此刻开出万般花朵</p>
+<p>已经不用害怕了，虽然一开始是害怕的，但我已经不是一个人了，从黑暗里出来也没关系的，其实在光芒底下反而更温暖，是个很棒的地方</p>
+<p>我不想失去，我想活着..今后也一直如此，我想和大家一起开女子会，想一起去玩，一起去吃布丁和蛋糕，还有，我想和有地先生在一起，还有很多两个人想一起做的事情，最初只是觉得表达心意就足够了…但不知何时起，仅仅是那样就变得无法满足了，所以完全不够，还差得远呢，我想一直，一直和你在一起<br><span class="heimu" title="你知道的太多了">表白欸</span></p>
+<p>见证千年之恋，共赏万花盛开</p>
+<h2 id="我的世界"><a href="#我的世界" class="headerlink" title="我的世界"></a>我的世界</h2><h3 id="烦人的村民（二创）"><a href="#烦人的村民（二创）" class="headerlink" title="烦人的村民（二创）"></a>烦人的村民（二创）</h3><p><span class="heimu" title="你知道的太多了">神不会流血，但你会。</span></p>
+
     </div>
+    
+    
+    
     
     
     
     
 </div>
 
-                    <footer id="footer">
+            <footer id="footer">
     <div id="footer-wrap">
         <div>
             &copy;
@@ -245,47 +248,22 @@
     </div>
 </footer>
 
-                </div>
-            </transition>
-            
-            <transition name="fade">
-                <div id="preview" ref="preview" v-show="previewShow">
-                    <img id="preview-content" ref="previewContent" />
-                </div>
-            </transition>
-            
         </div>
-        <script src="/js/main.js"></script>
         
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
         
-<script
-    src="https://giscus.app/client.js"
-    data-repo=""
-    data-repo-id=""
-    data-category=""
-    data-category-id=""
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="bottom"
-    data-theme="preferred_color_scheme"
-    data-lang="zh-CN"
-    crossorigin
-    async
-></script>
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
 
 
 
 
-
-        
-    </body>
+    
+</body>
 </html>
-
-<canvas
-    id="fireworks"
-    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 32767"
-></canvas>
-<script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
-<script src="/js/fireworks.min.js"></script>

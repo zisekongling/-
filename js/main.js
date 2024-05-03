@@ -21,7 +21,6 @@ const app = Vue.createApp({
     },
     methods: {
         render() {
-            if (typeof this.renderers === "undefined") return;
             for (let i of this.renderers) i();
         },
         handleScroll() {
@@ -34,8 +33,8 @@ const app = Vue.createApp({
             if (wrap) {
                 if (newScrollTop <= window.innerHeight - 100) this.menuColor = true;
                 else this.menuColor = false;
-                if (newScrollTop <= 400) wrap.style.marginTop = -newScrollTop / 5 + "px";
-                else wrap.style.marginTop = "-80px";
+                if (newScrollTop <= 400) wrap.style.top = "-" + newScrollTop / 5 + "px";
+                else wrap.style.top = "-80px";
             }
             this.scrollTop = newScrollTop;
         },

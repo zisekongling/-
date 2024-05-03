@@ -1,45 +1,44 @@
 
 <!DOCTYPE html>
 <html lang="cn">
-    <head>
-        <meta charset="utf-8" />
-        <title>【图文教程】精准教学智能成绩分析表格使用说明 | 紫色空灵の博客</title>
-        <meta name="author" content="紫色空灵" />
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-        <link rel="icon" href="/images/favicon.ico" />
-        <link rel="preconnect" href="https://cdn.staticfile.org" />
-<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
-<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
-<link rel="preconnect" href="https://fonts.loli.net" />
-<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
-<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
-<script> const mixins = {}; </script>
-
-<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-
-
-<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
-<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<head>
+    <meta charset="utf-8" />
+    <title>【图文教程】精准教学智能成绩分析表格使用说明 | 紫色空灵の博客</title>
+    <meta name="author" content="紫色空灵" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
 <link
     rel="stylesheet"
-    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
 />
 <script src="/js/lib/highlight.js"></script>
 
-
-<script src="https://cdn.staticfile.org/KaTeX/0.16.9/katex.min.js"></script>
-<script src="https://cdn.staticfile.org/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
-<link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.9/katex.min.css" />
-<script src="/js/lib/math.js"></script>
 
 
 <script src="/js/lib/preview.js"></script>
 
 
-<script src="https://cdn.staticfile.org/crypto-js/4.2.0/crypto-js.min.js"></script>
-<script src="/js/lib/crypto.js"></script>
 
 
 
@@ -47,25 +46,22 @@
 
 
 
-
-<script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
 <link rel="stylesheet" href="/css/main.css" />
-<link rel="preconnect" href="https://static-argvchs.netlify.app" />
 
-    <meta name="generator" content="Hexo 6.3.0"></head>
-    <body>
-        <div id="layout">
-            <transition name="fade">
-                <div id="loading" v-show="loading">
-                    <div id="loading-circle">
-                        <h2>正在加载中</h2>
-                        <p>加载过慢请开启缓存 内容稍后就好</p>
-                        <img src="/images/loading.gif" />
-                    </div>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
                 </div>
-            </transition>
-            <nav id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
-    <div id="desktop-menu">
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
         <a class="title" href="/">
             <span>紫色空灵の博客</span>
         </a>
@@ -95,8 +91,8 @@
             <span>&ensp;标签</span>
         </a>
         
-    </div>
-    <div id="mobile-menu">
+    </nav>
+    <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
             <i class="fa-solid fa-bars fa-fw"></i>
             <span>&emsp;紫色空灵の博客</span>
@@ -151,15 +147,14 @@
                 
             </div>
         </transition>
-    </div>
-</nav>
+    </nav>
+</div>
 <transition name="fade">
     <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
 </transition>
 
-            <transition name="into">
-                <div id="main" v-show="!loading">
-                    <div class="article">
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
     <div>
         <h1>【图文教程】精准教学智能成绩分析表格使用说明</h1>
     </div>
@@ -186,48 +181,62 @@
                 <i class="fa-solid fa-tags fa-fw"></i>
             </span>
             
+            
             <span class="tag">
                 
-                <a href="/tags/%E6%8A%80%E6%9C%AF/" style="color: #ffa2c4">技术</a>
+                <a href="/tags/%E6%95%99%E8%82%B2/" style="color: #ff7d73">
+                    教育
+                </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/%E6%95%99%E8%82%B2/" style="color: #00a596">教育</a>
+                <a href="/tags/%E6%8A%80%E6%9C%AF/" style="color: #03a9f4">
+                    技术
+                </a>
             </span>
             
         </span>
         
     </div>
     
-    
-    <input
-        id="crypto"
-        :class="['input', cryptoClass]"
-        :disabled="cryptoStatus"
-        ref="crypto"
-        placeholder="文章被加密，请输入密码"
-        data-encrypted="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"
-        data-shasum="ee31105e1e79fcbc0ce5cea39a84a0bb7e01f03525906a46e85f455398bff946"
-        v-model="crypto"
-    />
-    <transition name="fade">
-        <div class="content" ref="content" v-show="cryptoStatus"></div>
-    </transition>
-    
-    
-    
-    
-    <div id="comment">
-        <div id="giscus-container" class="giscus"></div>
+    <div class="content" v-pre>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我是十堰外国语高级中学的23班的一名学生，我们学校使用<a target="_blank" rel="noopener" href="https://jzjx.msyk.cn/">精准教学</a>系统进行学情分析。我为了方便记录和分析我们班级的成绩，制作了一份表格（表格数据为本次期中考试的成绩）。以下是这个表格的使用教程和解释。</p>
+<h2 id="下载文件"><a href="#下载文件" class="headerlink" title="下载文件"></a>下载文件</h2><p>请点击<a target="_blank" rel="noopener" href="https://wwpv.lanzoue.com/ixpbD0wvc1wj">此处</a>下载智能分析表格。</p>
+<h2 id="采集数据"><a href="#采集数据" class="headerlink" title="采集数据"></a>采集数据</h2><h3 id="网上表格"><a href="#网上表格" class="headerlink" title="网上表格"></a>网上表格</h3><p>首先打开<a target="_blank" rel="noopener" href="https://jzjx.msyk.cn/">精准教学官网</a>，然后点击教师登录（需要有教师账号）。</p>
+<p>接着，点击<code>学情分析</code>-<code>班级报告</code>，如下图所示。</p>
+<p><img src="https://s1.ax1x.com/2023/04/28/p91CsvF.png" alt="精准教学官网"></p>
+<p><img src="https://s1.ax1x.com/2023/04/28/p91CD3T.png" alt="教师登录"></p>
+<p><img src="https://s1.ax1x.com/2023/04/28/p91PHzT.png" alt="学情分析-班级报告"></p>
+<p>然后，以我们这次期中考试的语文为例，点击语文科目找到考试并下载报表，如下图所示。</p>
+<p><img src="https://s1.ax1x.com/2023/04/28/p91il6S.png" alt="下载语文报表"></p>
+<p>稍等片刻，然后打开下载的文件（一般在系统的下载文件夹里，智能分析表格也应该在这个文件夹里）。</p>
+<h3 id="表格复制"><a href="#表格复制" class="headerlink" title="表格复制"></a>表格复制</h3><p>打开压缩文件，找到自己的班级，将语文表格命名为<code>1</code>，数学为<code>2</code>，英语为<code>3</code>，生物为<code>7</code>，物理为<code>8</code>，化学为<code>9</code>。然后，按照上述方法采集其他科目的数据即可。</p>
+<p>表格分析与精准教学网站分析对比如下：</p>
+<p><img src="https://s2.loli.net/2023/04/28/VqFCIziBTjyKUJx.png" alt="表格分析"></p>
+<p><img src="https://s2.loli.net/2023/04/28/BbpDW9i2loRg5mI.png" alt="精准教学网站分析"></p>
+<p>其中，绿色表示最高分，红色表示低于平均分的人。</p>
+<h2 id="班级排名"><a href="#班级排名" class="headerlink" title="班级排名"></a>班级排名</h2><p>有时，我们需要对班级总分进行排名。以下是教程：</p>
+<p>首先，填写一份完整的表格，如下图所示。</p>
+<p><img src="https://s2.loli.net/2023/04/28/DmHUZGPdRy3NE5e.png" alt="完整的表格"></p>
+<p>然后，点击排序与筛选，再自定义排序，如下图所示。</p>
+<p><img src="https://s2.loli.net/2023/04/28/YQ9KlSGdmJ613u5.png" alt="排序与筛选"></p>
+<p><img src="https://s2.loli.net/2023/04/28/EMp5IRUL84cv6Dd.png" alt="自定义排序"></p>
+<p>最后，点击确定就可以了，如下图所示。</p>
+<p><img src="https://s2.loli.net/2023/04/28/6J2tkvenIBUs5uz.png" alt="排名结果"></p>
+<p>希望以上教程能够帮助大家更好地使用精准教学系统进行成绩分析。</p>
+
     </div>
+    
+    
+    
     
     
     
     
 </div>
 
-                    <footer id="footer">
+            <footer id="footer">
     <div id="footer-wrap">
         <div>
             &copy;
@@ -245,47 +254,22 @@
     </div>
 </footer>
 
-                </div>
-            </transition>
-            
-            <transition name="fade">
-                <div id="preview" ref="preview" v-show="previewShow">
-                    <img id="preview-content" ref="previewContent" />
-                </div>
-            </transition>
-            
         </div>
-        <script src="/js/main.js"></script>
         
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
         
-<script
-    src="https://giscus.app/client.js"
-    data-repo=""
-    data-repo-id=""
-    data-category=""
-    data-category-id=""
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="bottom"
-    data-theme="preferred_color_scheme"
-    data-lang="zh-CN"
-    crossorigin
-    async
-></script>
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
 
 
 
 
-
-        
-    </body>
+    
+</body>
 </html>
-
-<canvas
-    id="fireworks"
-    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 32767"
-></canvas>
-<script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
-<script src="/js/fireworks.min.js"></script>
