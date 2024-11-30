@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="utf-8" />
+    <title>ACG中的语文 | 紫色空灵の博客</title>
+    <meta name="author" content="紫色空灵" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>紫色空灵の博客</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-home fa-fw"></i>
+            <span>&ensp;主页</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;关于作者</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;文章列表</span>
+        </a>
+        
+        <a href="/categories/">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;文章分类</span>
+        </a>
+        
+        <a href="/tags/">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;标签</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;紫色空灵の博客</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-home fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">主页</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">关于作者</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">文章列表</div>
+                    </div>
+                </a>
+                
+                <a href="/categories/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">文章分类</div>
+                    </div>
+                </a>
+                
+                <a href="/tags/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>ACG中的语文</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/7/21
+        </span>
+        
+        <span class="category">
+            <a href="/categories/%E6%9D%82%E8%B0%88/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                杂谈
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/%E6%95%99%E8%82%B2/" style="color: #00bcd4">
+                    教育
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E4%BA%8C%E6%AC%A1%E5%85%83/" style="color: #03a9f4">
+                    二次元
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h1 id="什么是ACG"><a href="#什么是ACG" class="headerlink" title="什么是ACG"></a>什么是ACG</h1><p>ACGN是一个广泛用来描述动漫、漫画、游戏和小说等相关文化领域的术语。每个字母代表了一种特定类型的娱乐内容：<code> A表示动画（Animation），C表示漫画（Comic/ Cartoons），G表示游戏（Games）</code>。ACG架构了一个庞大而独特的文化生态系统，吸引了数以百万计的粉丝和爱好者。<br>现在我将采用A，C，G，的顺序摘抄句子，并配图。</p>
+<h1 id="A（Animation）动画"><a href="#A（Animation）动画" class="headerlink" title="A（Animation）动画"></a>A（Animation）动画</h1><h2 id="魔女之旅"><a href="#魔女之旅" class="headerlink" title="魔女之旅"></a>魔女之旅</h2><p>一开始我本打算给你一场极为艰难的试炼，让你受挫；但你为了达成目标不惜任何努力，实在是太优秀了，也有天赋，而且，也理解周围对你的看法，所以我便觉得给你试炼也是没用的，你一定会经受住苦难，重新站起来。但是，这也是你的问题所在，你太喜欢忍耐了。不要觉得自己能抗过去就行了，要是有事情不称心就起身反抗吧，不要就是不要，要学会大声说出口，这样你才能保护自己。</p>
+<p>当真心想要做成一件事的时候，人总是孤独的，必须要孤身一人，互相依赖上就完了。</p>
+<p>怀有恶意的人，即便不说谎也能做坏事。<br>谎言也并不都是恶，善意的谎言有时就像润滑油，能让人际关系变得更加圆滑；要是没有这些，只会让人们徒生摩擦关系紧张。</p>
+<p>离别绝对不是令人伤心的事情，不要止步不前，不要固步自封，因为离别是为了新的邂逅</p>
+<h2 id="魔法少女小圆"><a href="#魔法少女小圆" class="headerlink" title="魔法少女小圆"></a>魔法少女小圆</h2><p>只为自己而活的话，所有东西就由自己来承担</p>
+<p><del>和我签订契约，成为魔法少女吧。</del></p>
+<p>不管前路有多大的阻碍，我们肯定会跨越给你看</p>
+<p>背叛她们的不是我们，真要说的话，背叛她们的是她们自身的愿望。无论何种愿望，哪怕它有一点点不合常理之处便一定会产生扭曲，最终从这扭曲中诞生出灾祸也是合情合理。如果这理所应当的结果都被当成背叛的话，那么愿望本身就是个错误。</p>
+<h1 id="C（Comic-Cartoons）漫画"><a href="#C（Comic-Cartoons）漫画" class="headerlink" title="C（Comic&#x2F; Cartoons）漫画"></a>C（Comic&#x2F; Cartoons）漫画</h1><p>由于常见漫画基本上都动画化了所以就和第一个重复了<br>所以就不列了</p>
+<h1 id="G-Game-游戏"><a href="#G-Game-游戏" class="headerlink" title="G (Game) 游戏"></a>G (Game) 游戏</h1><p><span class="heimu" title="你知道的太多了">这才是重头戏！<br>本文的重点部分即将开始</span></p>
+<h2 id="千恋-万花"><a href="#千恋-万花" class="headerlink" title="千恋*万花"></a>千恋*万花</h2><p> 愿千年之恋,有朝一日能使万花怒放</p>
+<p> 不论是乌云密布，还是大雨倾盆，星星总是会在同一个地方</p>
+<p> 千年的爱恋，于此刻开出万般花朵</p>
+<p>已经不用害怕了，虽然一开始是害怕的，但我已经不是一个人了，从黑暗里出来也没关系的，其实在光芒底下反而更温暖，是个很棒的地方</p>
+<p>我不想失去，我想活着..今后也一直如此，我想和大家一起开女子会，想一起去玩，一起去吃布丁和蛋糕，还有，我想和有地先生在一起，还有很多两个人想一起做的事情，最初只是觉得表达心意就足够了…但不知何时起，仅仅是那样就变得无法满足了，所以完全不够，还差得远呢，我想一直，一直和你在一起<br><span class="heimu" title="你知道的太多了">表白欸</span></p>
+<p>见证千年之恋，共赏万花盛开</p>
+<h2 id="我的世界"><a href="#我的世界" class="headerlink" title="我的世界"></a>我的世界</h2><h3 id="烦人的村民（二创）"><a href="#烦人的村民（二创）" class="headerlink" title="烦人的村民（二创）"></a>烦人的村民（二创）</h3><p><span class="heimu" title="你知道的太多了">神不会流血，但你会。</span></p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2024 紫色空灵の博客
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;紫色空灵
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>
